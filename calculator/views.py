@@ -18,4 +18,4 @@ def calculate_age(request):
             }
     else:
         form = DateForm()
-    return render(request, 'calculator/age_calculator.html', {'form': form, 'age_details': age_details})
+    return render(request, 'calculator/index.html', {'form': form, 'age_details': age_details})
