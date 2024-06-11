@@ -1,16 +1,21 @@
 from django.shortcuts import render
 from .forms import DateForm
 from datetime import date
+from dateutil.relativedelta import relativedelta
 
 def calculate_age(request):
-    age = None
+    age_details = None
     if request.method == 'POST':
         form = DateForm(request.POST)
         if form.is_valid():
             dob = form.cleaned_data['date_of_birth']
             today = date.today()
-            age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
+            delta = relativedelta(today, dob)
+            age_details = {
+                'years': delta.years,
+                'months': delta.months,
+                'days': delta.days
+            }
     else:
         form = DateForm()
-
-    return render(request, 'calculator/age_calculator.html', {'form': form, 'age': age})
+    return render(request, 'calculator/age_calculator.html', {'form': form, 'age_details': age_details})
