@@ -56,10 +56,10 @@ Run the server locally.
 ```bash
 cd computesphere-django-example
 
-docker run -p 8080:8080 computesphere-django-example:v.0.0.1
+docker run -p 8000:8000 computesphere-django-example:v.0.0.1
 ```
 
-This runs the server on `localhost:8080`.
+This runs the server on `localhost:8000`.
 
 ## Deploy to ComputeSphere
 
