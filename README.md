@@ -1,10 +1,10 @@
 <p align="right">
-    <img src="assets/images/logo.svg" width="50px" />
+    <img src="/calculator/static/assets/images/logo.svg" width="50px" />
 </p>
 
-# ComputeSphere Golang Inspire Quotes Example App
+# ComputeSphere Django Age Calculator Example App
 
-This example deploys a GO application to ComputeSphere.
+This example deploys a django application to ComputeSphere.
 
 > [!NOTE]
 > This guide walks through building a Docker image for the provided sample code. Please note that the version `v0.0.1` used in the example is for demonstration purposes only. You should replace it with a version that suits your specific setup and requirements.
