@@ -26,7 +26,7 @@
                 </h3>
                 <p class="description text">This tool allows you to calculate age.</p>
                 <form method="post">
-                    {% csrf_token %}
+                    <!-- {% csrf_token %} -->
                     {{ form.as_p }}
                     <button type="submit">Calculate Age</button>
                 </form>
