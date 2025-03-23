@@ -38,7 +38,7 @@ jobs:
           sed -r -i "s/[0-9]{4}( ComputeSphere LLC. All Rights Reserved.)/${CURRENT_YEAR}\1/gi" README.md
 
       - name: Commit and Push
-        uses: actions-js/push@v1
+        uses: actions-js/push@v1.5
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           message: "Update year in README"
