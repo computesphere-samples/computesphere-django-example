@@ -43,5 +43,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           message: "Update year in README"
           force: true
-          # author_name: computesphere-samples-bot
-          # author_email: computesphere-samples-bot@users.noreply.github.com
+          author_name: computesphere-samples-bot
+          author_email: computesphere-samples-bot@users.noreply.github.com
+          branch: main
