@@ -15,7 +15,7 @@ COPY . /app/
 
 # Set environment variables
 ENV DJANGO_SETTINGS_MODULE=computesphere_django_example.settings
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONUNBUFFERED=1
 
 # Expose port 8000 to the outside world
 EXPOSE 8000
