@@ -21,4 +21,5 @@ ENV PYTHONUNBUFFERED=1
 EXPOSE 8000
 
 # Run the Django development server
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+# The platform sets PORT to the service's port; 8000 when it isn't set.
+CMD ["sh", "-c", "exec python manage.py runserver 0.0.0.0:${PORT:-8000}"]
